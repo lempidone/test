@@ -15,7 +15,8 @@
     "start": "gulp start",
     "nomin": "gulp nomin",
     "imagemin": "gulp imagemin",
-    "webp": "gulp webp"
+    "webp": "gulp webp",
+    "prod": "gulp prod"
   },
   "editorconfig-cli": [
     "*.json",

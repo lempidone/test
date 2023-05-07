@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {compileStyles, compileMinStyles} from './gulp/compileStyles.mjs';
-import {copy, copyImages, copySvg} from './gulp/copyAssets.mjs';
+import {copy, copyImages, copySvg, copyProd} from './gulp/copyAssets.mjs';
 import {compileMainMinScripts, compileMainScripts, compileVendorScripts} from './gulp/compileScripts.mjs';
 import {optimizeSvg, sprite, createWebp, optimizePng, optimizeJpg} from './gulp/optimizeImages.mjs';
 import pug from './gulp/compilePug.mjs';
@@ -10,6 +10,7 @@ import pug from './gulp/compilePug.mjs';
 const server = browserSync.create();
 const streamStyles = () => compileStyles().pipe(server.stream());
 const clean = () => del('build');
+const cleanProd = () => del('docs');
 const refresh = (done) => {
   server.reload();
   done();
@@ -42,5 +43,6 @@ const build = gulp.series(clean, copy, sprite, gulp.parallel(compileMinStyles, c
 const dev = gulp.series(clean, copy, sprite, gulp.parallel(compileMinStyles, compileMainMinScripts, compileVendorScripts, pug, optimizePng, optimizeJpg, optimizeSvg), syncServer);
 const start = gulp.series(clean, copy, sprite, gulp.parallel(compileStyles, compileMainScripts, compileVendorScripts, pug), syncServer);
 const nomin = gulp.series(clean, copy, sprite, gulp.parallel(compileStyles, compileMainScripts, compileVendorScripts, pug, optimizePng, optimizeJpg, optimizeSvg));
+const prod = gulp.series(nomin, cleanProd, copyProd);
 
-export {createWebp as webp, build, start, dev, nomin};
+export {createWebp as webp, build, start, dev, nomin, prod};
