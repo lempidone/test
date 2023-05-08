@@ -1,0 +1,24 @@
+.title {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  color: $color-night-rider;
+
+  &--h1 {
+    font-size: 80px;
+    line-height: 80px;
+
+    @include vp-1023 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    @include vp-767 {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+}

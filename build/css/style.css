@@ -718,6 +718,38 @@ button,
   pointer-events: auto;
 }
 
+.title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  color: #303030;
+}
+.title--h1 {
+  font-size: 80px;
+  line-height: 80px;
+}
+@media (max-width: 1023px) {
+  .title--h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .title--h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

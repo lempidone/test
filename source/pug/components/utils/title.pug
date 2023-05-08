@@ -1,0 +1,8 @@
+mixin title(options = {})
+  - const tag = options.tag;
+  - const text = options.text;
+
+  if (options.hidden)
+    #{tag}.visually-hidden!=text
+  else
+    #{tag}.title&attributes(attributes)!=text
