@@ -730,12 +730,16 @@ button,
           align-items: flex-start;
   width: 100%;
   margin: 0;
-  font-weight: 500;
   color: #303030;
+}
+.title h2 {
+  font-size: 24px;
+  line-height: 27.6px;
 }
 .title--h1 {
   font-size: 80px;
   line-height: 80px;
+  font-weight: 500;
 }
 @media (max-width: 1023px) {
   .title--h1 {
@@ -747,6 +751,34 @@ button,
   .title--h1 {
     font-size: 45px;
     line-height: 50px;
+  }
+}
+.title--h2 {
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .title--h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+}
+.title--h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+@media (max-width: 1023px) {
+  .title--h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .title--h3 {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
