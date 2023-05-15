@@ -71,28 +71,152 @@
             <div class="intro__content">
               <ul class="cards intro__cards">
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#menu">
-                      <h3 class="title card__title title--h3">Меню</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#menu">
+                      <h3 class="title card__title title--h3">Меню</h3></a>
+                  </article>
                 </li>
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#loader">
-                      <h3 class="title card__title title--h3">Лоадер</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#loader">
+                      <h3 class="title card__title title--h3">Лоадер</h3></a>
+                  </article>
                 </li>
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#first-screen">
-                      <h3 class="title card__title title--h3">Сборка<br>первого экрана</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#first-screen">
+                      <h3 class="title card__title title--h3">Сборка<br>первого экрана</h3></a>
+                  </article>
                 </li>
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#show-on-scroll">
-                      <h3 class="title card__title title--h3">Появление блоков</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#show-on-scroll">
+                      <h3 class="title card__title title--h3">Появление блоков</h3></a>
+                  </article>
                 </li>
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#parallax">
-                      <h3 class="title card__title title--h3">Параллакс</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#parallax">
+                      <h3 class="title card__title title--h3">Параллакс</h3></a>
+                  </article>
                 </li>
                 <li class="cards__item">
-                  <article class="card"><a class="card__link" href="#scroll-slider">
-                      <h3 class="title card__title title--h3">Слайдер<br>по скроллу</h3></a></article>
+                  <article class="card card--white"><a class="card__link" href="#scroll-slider">
+                      <h3 class="title card__title title--h3">Слайдер<br>по скроллу</h3></a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="animation">
+          <div class="container">
+            <div class="animation__content">
+              <h2 class="title title--h2">Меню тз</h2>
+              <div class="text">
+                <p class="text__item"><b>Анимация появления</b></p>
+                <p class="text__item">При открытии: Сначала появляется меню, затем внутренний контент. Пункты внутри появляются с разной задержкой - эффект &#8243лесенки&#8243</p>
+                <p class="text__item">При закрытии: Внутренний контент исчезает до закрытия меню, без задержки</p>
+                <p class="text__item">Анимация меню на данном сайте реализована с помощью css (это база). Можете так же реализовать анимацию с помощью gsap</p>
+                <p class="text__item"><b>JS</b></p>
+                <p class="text__item">Для блокировки скролла используется window.scrollLock</p>
+                <p class="text__item">Должны быть реализованы функции или методы для открытия и закрытия меню, которые можно использовать в других модулях</p>
+              </div>
+            </div>
+            <div class="animation__content">
+              <h2 class="title title--h2">Лоадер тз</h2>
+              <div class="text">
+                <p class="text__item">Анимация лоадера произвольная, можно использовать css keyframes или gsap</p>
+                <p class="text__item">После загрузки страницы мы всегда находимся вверху страницы (не должно быть видно скачка)</p>
+                <p class="text__item">Скролл страницы заблокирован во время загрузки</p>
+              </div>
+            </div>
+            <div class="animation__content">
+              <h2 class="title title--h2">Сборка первого экрана тз</h2>
+              <div class="text">
+                <p class="text__item">Для анимации используйте неколько разных css свойств и небольшие задержки</p>
+                <p class="text__item">Для построчной или посимвольной анимации текста используйте splitting.js (пример: интро этого сайта)</p>
+              </div>
+            </div>
+            <div class="animation__content">
+              <h2 class="title title--h2">Появление блоков</h2>
+              <div class="text">
+                <p class="text__item">доскролили и вжух!</p>
+                <p class="text__item">Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()</p>
+              </div>
+              <ul class="cards animation__cards">
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-in</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-in</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-scale</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-scale</p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="animation__content">
+              <h2 class="title title--h2">Параллакс по скроллу</h2>
+              <div class="text">
+                <p class="text__item">Эффекты, которые постоянно срабатывают по скроллу<br>Скроллим скроллим и вжух вжух вжух!</p>
+              </div>
+              <ul class="cards animation__cards">
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-scale</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">fade-scale</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">transform y</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="cards__item">
+                  <article class="card card--grey card--center">
+                    <div class="text">
+                      <p class="text__item">transform y</p>
+                    </div>
+                  </article>
                 </li>
               </ul>
             </div>

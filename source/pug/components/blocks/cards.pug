@@ -2,5 +2,4 @@ mixin cards(data)
   ul.cards&attributes(attributes)
     each item in data.list
       li.cards__item
-        if data.name === "intro-cards"
-          +card(item)
+        +card(item)(class=data.cardClass)

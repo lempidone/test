@@ -7,7 +7,22 @@
   overflow: hidden;
 
   @include vp-767 {
-    min-height: 70px;
+    min-height: auto;
+  }
+
+  &--grey {
+    background-color: $color-gainsboro;
+  }
+
+  &--center {
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    @include vp-1023 {
+      padding: 15px;
+    }
   }
 
   &__link {
@@ -15,6 +30,10 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+
+    &[href=""] {
+      pointer-events: none;
+    }
 
     @include vp-1023 {
       padding: 15px;

@@ -51,11 +51,11 @@
       }
 
       &::before {
-        transform: translateX(0) rotate(-45deg);
+        transform: translateX(0) rotate(-45deg) translate3d(0, 0, 0);
       }
 
       &::after {
-        transform: translateX(0) rotate(45deg);
+        transform: translateX(0) rotate(45deg) translate3d(0, 0, 0);
       }
 
       @include hover-focus {

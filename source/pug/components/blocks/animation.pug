@@ -1,0 +1,94 @@
+-
+  const animationCards = {
+    cardClass: "card--grey card--center",
+    list: [
+      {
+        text: "fade",
+        href: "",
+      },
+      {
+        text: "fade",
+        href: "",
+      },
+      {
+        text: "fade-in",
+        href: "",
+      },
+      {
+        text: "fade-in",
+        href: "",
+      },
+      {
+        text: "fade-scale",
+        href: "",
+      },
+      {
+        text: "fade-scale",
+        href: "",
+      },
+    ]
+  }
+
+-
+  const animationCards2 = {
+    cardClass: "card--grey card--center",
+    list: [
+      {
+        text: "fade-scale",
+        href: "",
+      },
+      {
+        text: "fade-scale",
+        href: "",
+      },
+      {
+        text: "transform y",
+        href: "",
+      },
+      {
+        text: "transform y",
+        href: "",
+      },
+    ]
+  }
+
+mixin animation()
+  section.animation&attributes(attributes)
+    .container
+      .animation__content
+        +title({tag: "h2", text: ["Меню тз"]}).title--h2
+        +text([
+          "<b>Анимация появления</b>",
+          "При открытии: Сначала появляется меню, затем внутренний контент. Пункты внутри появляются с разной задержкой - эффект &#8243лесенки&#8243",
+          "При закрытии: Внутренний контент исчезает до закрытия меню, без задержки",
+          "Анимация меню на данном сайте реализована с помощью css (это база). Можете так же реализовать анимацию с помощью gsap",
+          "<b>JS</b>",
+          "Для блокировки скролла используется window.scrollLock",
+          "Должны быть реализованы функции или методы для открытия и закрытия меню, которые можно использовать в других модулях",
+        ])
+      .animation__content
+        +title({tag: "h2", text: ["Лоадер тз"]}).title--h2
+        +text([
+          "Анимация лоадера произвольная, можно использовать css keyframes или gsap",
+          "После загрузки страницы мы всегда находимся вверху страницы (не должно быть видно скачка)",
+          "Скролл страницы заблокирован во время загрузки",
+        ])
+      .animation__content
+        +title({tag: "h2", text: ["Сборка первого экрана тз"]}).title--h2
+        +text([
+          "Для анимации используйте неколько разных css свойств и небольшие задержки",
+          "Для построчной или посимвольной анимации текста используйте splitting.js (пример: интро этого сайта)",
+        ])
+      .animation__content
+        +title({tag: "h2", text: ["Появление блоков"]}).title--h2
+        +text([
+          "доскролили и вжух!",
+          "Можно делать через классы и высчитывать по скроллу getBoundingClientRect каждого блока, но гораздо проще использовать ScrollTrigger.batch()",
+        ])
+        +cards(animationCards).animation__cards
+      .animation__content
+        +title({tag: "h2", text: ["Параллакс по скроллу"]}).title--h2
+        +text([
+          "Эффекты, которые постоянно срабатывают по скроллу<br>Скроллим скроллим и вжух вжух вжух!",
+        ])
+        +cards(animationCards2).animation__cards

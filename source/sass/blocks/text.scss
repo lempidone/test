@@ -1,6 +1,9 @@
 .text {
   display: inline-flex;
+  flex-direction: column;
   color: $color-night-rider;
+  font-size: 18px;
+  line-height: 26px;
 
   p {
     margin: 0;

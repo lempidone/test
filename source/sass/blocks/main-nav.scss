@@ -43,7 +43,7 @@
     font-size: 50px;
     line-height: 60px;
     color: $color-default-white;
-    transform: translateY(100%);
+    transform: translateY(100%) translate3d(0, 0, 0);
     transition: transform $trans-600;
 
     @include vp-767 {
