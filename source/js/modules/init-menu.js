@@ -15,6 +15,12 @@ const closeMenu = () => {
 };
 
 const initMenu = () => {
+  const links = nav.querySelectorAll('.main-nav__link');
+
+  links.forEach((item, index) => {
+    item.style.transitionDelay = `${0.33 + index * 0.08}s`;
+  });
+
   if (menuToggle) {
     menuToggle.addEventListener('click', () => {
       if (menuToggle.ariaPressed === 'true') {
