@@ -1959,8 +1959,9 @@ button,
 }
 
 .intro {
-  position: relative;
-  z-index: -1;
+  position: sticky;
+  top: 0;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2101,9 +2102,14 @@ button,
 }
 
 .animation {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 90px;
+  background-color: #ffffff;
+}
+.animation .container {
   max-width: 70%;
   margin: 0 auto;
-  padding: 0 0 90px;
 }
 @media (max-width: 767px) {
   .animation {

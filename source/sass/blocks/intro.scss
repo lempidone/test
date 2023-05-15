@@ -1,6 +1,7 @@
 .intro {
-  position: relative;
-  z-index: -1;
+  position: sticky;
+  top: 0;
+  z-index: 0;
   display: flex;
   align-items: center;
   min-height: calc(100 * var(--vh, 1vh));

@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    window.scrollLock.enableScrolling();
   });
 });
 
