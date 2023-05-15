@@ -1,0 +1,4 @@
+mixin card(data)
+  article.card&attributes(attributes)
+    a.card__link(href=data.href)
+      +title({tag: "h3", text: [data.text]}).card__title.title--h3

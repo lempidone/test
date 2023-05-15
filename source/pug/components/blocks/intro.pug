@@ -1,7 +1,42 @@
+-
+  const introCards = {
+    name: "intro-cards",
+    list: [
+      {
+        text: "Меню",
+        href: "#menu",
+      },
+      {
+        text: "Лоадер",
+        href: "#loader",
+      },
+      {
+        text: "Сборка<br>первого экрана",
+        href: "#first-screen",
+      },
+      {
+        text: "Появление блоков",
+        href: "#show-on-scroll",
+      },
+      {
+        text: "Параллакс",
+        href: "#parallax",
+      },
+      {
+        text: "Слайдер<br>по скроллу",
+        href: "#scroll-slider",
+      },
+    ]
+  }
+
+
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+  section.intro
+    .intro__bg
+      +video({src: "video/background-wave.mp4"})
     .container
       .intro__heading
         +title({tag: "h1", text: ["Задачки<br>на&nbsp;прокачку"]}).title--h1.intro__title
+        +text(["Задачи на интерфейсную логику,<br> которые часто встречаются<br> на реальных проектах"]).intro__text
+      .intro__content
+        +cards(introCards).intro__cards

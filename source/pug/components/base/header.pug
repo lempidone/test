@@ -2,35 +2,44 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "animations.html",
+        text: "Анимации"
       },
       {
-        href: "#",
-        text: "Страница 2"
+        href: "map-1.html",
+        text: "Карта 1"
       },
       {
-        href: "#",
-        text: "Страница 3"
+        href: "map-2.html",
+        text: "Карта 2"
+      },
+      {
+        href: "map-3.html",
+        text: "Карта 3"
+      },
+      {
+        href: "map-4.html",
+        text: "Карта 4"
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods).is-menu
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("icon-logo", 362, 67)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("icon-logo", 362, 67)
+      +btn().header__toggle.btn-reset(data-menu="toggle", aria-label="Переключатель отображения меню", aria-pressed="false").btn--menu
+    nav.main-nav(data-main-nav)
+      .container
+        ul.main-nav__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item
+              if(activeState)
+                span.main-nav__link.is-active=link.text
+              else
+                a.main-nav__link(href=link.href)=link.text

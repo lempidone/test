@@ -1,13 +1,72 @@
 .header {
-  padding: 28px 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding: 15px 0;
+  color: $color-night-rider;
 
-  background-color: $color-neon-blue;
+  background-color: transparent;
 
   .container {
+    position: relative;
+    z-index: 2;
     display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
 
   &__logo {
+    width: 181px;
+    height: 33px;
+    color: inherit;
+    transition: color $trans-default;
+
+    @include vp-767 {
+      width: 145px;
+      height: 26px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__toggle {
+    &::after,
+    &::before {
+      background-color: inherit;
+    }
+  }
+
+  &.is-menu {
     color: $color-default-white;
+
+    .btn--menu {
+      &::after,
+      &::before {
+        top: 50%;
+        background-color: $color-default-white;
+      }
+
+      &::before {
+        transform: translateX(0) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translateX(0) rotate(45deg);
+      }
+
+      @include hover-focus {
+        &::before {
+          transform: translateX(0) rotate(-40deg);
+        }
+
+        &::after {
+          transform: translateX(0) rotate(40deg);
+        }
+      }
+    }
   }
 }

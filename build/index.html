@@ -10,37 +10,78 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol></svg></div>
+    <div class="visually-hidden"></div>
     <div class="wrapper">
-      <header class="header">
-        <div class="container"><span class="header__logo">Логотип</span>
-          <nav class="main-nav">
-            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-              <svg width="20" height="20" aria-hidden="true">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><span class="main-nav__link is-active">Главная</span>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 2</a>
-                </li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Страница 3</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+      <header class="header is-menu">
+        <div class="container"><span class="header__logo">
+            <svg width="362" height="67" aria-hidden="true">
+              <use xlink:href="#icon-logo"></use>
+            </svg></span>
+          <button class="btn header__toggle btn-reset btn--menu" type="button" data-menu="toggle" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
         </div>
+        <nav class="main-nav" data-main-nav>
+          <div class="container">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="animations.html">Анимации</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="map-1.html">Карта 1</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="map-2.html">Карта 2</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="map-3.html">Карта 3</a>
+              </li>
+              <li class="main-nav__item"><a class="main-nav__link" href="map-4.html">Карта 4</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
       <main>
-        <div class="intro">
+        <section class="intro">
+          <div class="intro__bg">
+            <div class="video">
+              <video class="video__player" width="960" height="620" autoplay="true" loop="true">
+                <source src="video/background-wave.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
           <div class="container">
             <div class="intro__heading">
               <h1 class="title title--h1 intro__title">Задачки<br>на&nbsp;прокачку</h1>
+              <div class="text intro__text">
+                <p class="text__item">Задачи на интерфейсную логику,<br> которые часто встречаются<br> на реальных проектах</p>
+              </div>
+            </div>
+            <div class="intro__content">
+              <ul class="cards intro__cards">
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#menu">
+                      <h3 class="title card__title title--h3">Меню</h3></a></article>
+                </li>
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#loader">
+                      <h3 class="title card__title title--h3">Лоадер</h3></a></article>
+                </li>
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#first-screen">
+                      <h3 class="title card__title title--h3">Сборка<br>первого экрана</h3></a></article>
+                </li>
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#show-on-scroll">
+                      <h3 class="title card__title title--h3">Появление блоков</h3></a></article>
+                </li>
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#parallax">
+                      <h3 class="title card__title title--h3">Параллакс</h3></a></article>
+                </li>
+                <li class="cards__item">
+                  <article class="card"><a class="card__link" href="#scroll-slider">
+                      <h3 class="title card__title title--h3">Слайдер<br>по скроллу</h3></a></article>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container"></div>

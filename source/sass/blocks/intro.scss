@@ -1,0 +1,100 @@
+.intro {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  min-height: calc(100 * var(--vh, 1vh));
+  background-color: transparent;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__heading {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 40px 0 0;
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .intro__text {
+      justify-self: end;
+      text-align: right;
+      align-items: end;
+
+      @include vp-767 {
+        justify-self: start;
+        text-align: left;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cards {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 40px;
+
+    @include vp-1279 {
+      grid-column: 1;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card__link {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .title--h3 {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: contrast(1) sepia(1) grayscale(1) brightness(0.7);
+
+    .video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

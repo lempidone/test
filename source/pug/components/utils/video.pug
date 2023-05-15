@@ -1,0 +1,4 @@
+mixin video(options = {})
+  .video&attributes(attributes)
+    video(width="960", height="620", autoplay="true", loop="true").video__player
+      source(src=options.src, type="video/mp4")

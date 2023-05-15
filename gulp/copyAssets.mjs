@@ -8,7 +8,7 @@ const copyProd = () => gulp.src('build/**/*', {base: 'build'}).pipe(gulp.dest('d
 
 const copy = () =>
   gulp
-      .src(['source/**.html', 'source/fonts/**', 'source/img/**', 'source/favicon/**', 'source/data/**'], {
+      .src(['source/**.html', 'source/fonts/**', 'source/img/**', 'source/favicon/**', 'source/data/**', 'source/video/**'], {
         base: 'source',
       })
       .pipe(gulp.dest('build'));

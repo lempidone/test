@@ -1,27 +1,57 @@
 .main-nav {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background-color: $color-night-rider;
+  transition: height cubic-bezier(.55,0,.44,1) 1s, clip-path cubic-bezier(.55,0,.44,1) 1s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+
+  .container {
+    height: inherit;
+  }
+
   &__list {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+    height: 100%;
     margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
     padding: 0;
-
     list-style: none;
   }
 
   &__item {
-    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
   }
 
   &__link {
+    display: inline-flex;
+    font-size: 50px;
+    line-height: 60px;
     color: $color-default-white;
+    transform: translateY(100%);
+    transition: transform $trans-600;
+    transition-delay: 1s;
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 40px;
+    }
 
     &.is-active {
       opacity: 0.6;
     }
   }
 
-  &__toggle {
-    display: none;
+  &.is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    height: 100vh;
+    width: 100%;
   }
 }
